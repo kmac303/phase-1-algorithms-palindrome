@@ -1,5 +1,11 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  var length = word.length;
+  for (var i = 0; i < length/2; i++) {
+    if (word[i] !== word[length - 1 - i]) {
+        return false;
+    }
+  }
+  return true;
 }
 
 /* 
@@ -7,6 +13,8 @@ function isPalindrome(word) {
 */
 
 /*
+checks if the first letter of "word" matches the last letter
+repeats for every letter afterwards, moving forward from the front and backward from the back
   Add written explanation of your solution here
 */
 
